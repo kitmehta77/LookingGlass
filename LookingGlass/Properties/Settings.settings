@@ -1,0 +1,14 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="LookingGlass.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="rtrd52qkf6p24ebsConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;server=bmlx3df4ma7r1yh4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;user id=u5bjygxzfk20gi56;persistsecurityinfo=True;database=rtrd52qkf6p24ebs&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;MySql.Data.MySqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">server=bmlx3df4ma7r1yh4.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;user id=u5bjygxzfk20gi56;persistsecurityinfo=True;database=rtrd52qkf6p24ebs</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

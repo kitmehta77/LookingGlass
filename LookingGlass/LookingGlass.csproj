@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AC198D9-1C06-43D9-B0E2-C1890C151ECB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LookingGlass</RootNamespace>
+    <AssemblyName>LookingGlass</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942" />
+    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604" />
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d" />
+    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddApplicationForm.Designer.cs">
+      <DependentUpon>AddApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCandidateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCandidateForm.Designer.cs">
+      <DependentUpon>AddCandidateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEmployerForm.Designer.cs">
+      <DependentUpon>AddEmployerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddVacancyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVacancyForm.Designer.cs">
+      <DependentUpon>AddVacancyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationReportForm.Designer.cs">
+      <DependentUpon>ApplicationReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignCandidateQualification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignCandidateQualification.Designer.cs">
+      <DependentUpon>AssignCandidateQualification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignCandidateSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignCandidateSkills.Designer.cs">
+      <DependentUpon>AssignCandidateSkills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignVacancyQualificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignVacancyQualificationForm.Designer.cs">
+      <DependentUpon>AssignVacancyQualificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignVacancySkillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignVacancySkillForm.Designer.cs">
+      <DependentUpon>AssignVacancySkillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidatesReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CandidatesReportForm.Designer.cs">
+      <DependentUpon>CandidatesReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataController.Designer.cs">
+      <DependentUpon>DataController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCandidateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteCandidateForm.Designer.cs">
+      <DependentUpon>DeleteCandidateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteEmployerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteEmployerForm.Designer.cs">
+      <DependentUpon>DeleteEmployerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteVacancyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteVacancyForm.Designer.cs">
+      <DependentUpon>DeleteVacancyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DsEmployers.cs">
+      <DependentUpon>DsEmployers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsEmployers.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsEmployers.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsLookingGlass.cs">
+      <DependentUpon>dsLookingGlass.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsLookingGlass.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLookingGlass.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmployersClerkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployersClerkForm.Designer.cs">
+      <DependentUpon>EmployersClerkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FillVacancyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FillVacancyForm.Designer.cs">
+      <DependentUpon>FillVacancyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployerReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployerReportForm.Designer.cs">
+      <DependentUpon>EmployerReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RemoveApplicationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveApplicationForm.Designer.cs">
+      <DependentUpon>RemoveApplicationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveCandidateQualificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveCandidateQualificationForm.Designer.cs">
+      <DependentUpon>RemoveCandidateQualificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveCandidateSkills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveCandidateSkills.Designer.cs">
+      <DependentUpon>RemoveCandidateSkills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveVacancyQualificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveVacancyQualificationForm.Designer.cs">
+      <DependentUpon>RemoveVacancyQualificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RemoveVacancySkillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RemoveVacancySkillForm.Designer.cs">
+      <DependentUpon>RemoveVacancySkillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCandidateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCandidateForm.Designer.cs">
+      <DependentUpon>UpdateCandidateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEmployerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateEmployerForm.Designer.cs">
+      <DependentUpon>UpdateEmployerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateVacancyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateVacancyForm.Designer.cs">
+      <DependentUpon>UpdateVacancyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacancyReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacancyReportForm.Designer.cs">
+      <DependentUpon>VacancyReportForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddApplicationForm.resx">
+      <DependentUpon>AddApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCandidateForm.resx">
+      <DependentUpon>AddCandidateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEmployerForm.resx">
+      <DependentUpon>AddEmployerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddVacancyForm.resx">
+      <DependentUpon>AddVacancyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationReportForm.resx">
+      <DependentUpon>ApplicationReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignCandidateQualification.resx">
+      <DependentUpon>AssignCandidateQualification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignCandidateSkills.resx">
+      <DependentUpon>AssignCandidateSkills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignVacancyQualificationForm.resx">
+      <DependentUpon>AssignVacancyQualificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignVacancySkillForm.resx">
+      <DependentUpon>AssignVacancySkillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CandidatesReportForm.resx">
+      <DependentUpon>CandidatesReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataController.resx">
+      <DependentUpon>DataController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteCandidateForm.resx">
+      <DependentUpon>DeleteCandidateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteEmployerForm.resx">
+      <DependentUpon>DeleteEmployerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteVacancyForm.resx">
+      <DependentUpon>DeleteVacancyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployersClerkForm.resx">
+      <DependentUpon>EmployersClerkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FillVacancyForm.resx">
+      <DependentUpon>FillVacancyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployerReportForm.resx">
+      <DependentUpon>EmployerReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RemoveApplicationForm.resx">
+      <DependentUpon>RemoveApplicationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveCandidateQualificationForm.resx">
+      <DependentUpon>RemoveCandidateQualificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveCandidateSkills.resx">
+      <DependentUpon>RemoveCandidateSkills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveVacancyQualificationForm.resx">
+      <DependentUpon>RemoveVacancyQualificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RemoveVacancySkillForm.resx">
+      <DependentUpon>RemoveVacancySkillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCandidateForm.resx">
+      <DependentUpon>UpdateCandidateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateEmployerForm.resx">
+      <DependentUpon>UpdateEmployerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateVacancyForm.resx">
+      <DependentUpon>UpdateVacancyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VacancyReportForm.resx">
+      <DependentUpon>VacancyReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DsEmployers.xsc">
+      <DependentUpon>DsEmployers.xsd</DependentUpon>
+    </None>
+    <None Include="DsEmployers.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsEmployers.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsEmployers.xss">
+      <DependentUpon>DsEmployers.xsd</DependentUpon>
+    </None>
+    <None Include="dsLookingGlass.xsc">
+      <DependentUpon>dsLookingGlass.xsd</DependentUpon>
+    </None>
+    <None Include="dsLookingGlass.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLookingGlass.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsLookingGlass.xss">
+      <DependentUpon>dsLookingGlass.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
